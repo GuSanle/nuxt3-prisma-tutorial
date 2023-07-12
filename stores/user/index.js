@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", () => {
   const users = reactive({
-    name: "jack",
-    age: 100,
+    name: "",
+    age: 0,
     sex: "male",
     status: true,
   });
@@ -12,5 +12,12 @@ export const useUserStore = defineStore("user", () => {
     users.status = !users.status;
   };
 
-  return { users, changeStatus };
+  const setUserInfo = (info) => {
+    users.name = info.value.name;
+    users.age = info.value.age;
+    users.sex = info.value.sex;
+    users.status = info.value.status;
+  };
+
+  return { users, changeStatus, setUserInfo };
 });
