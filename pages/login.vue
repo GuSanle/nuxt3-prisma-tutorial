@@ -10,7 +10,7 @@
 definePageMeta({
   auth: {
     unauthenticatedOnly: true,
-    navigateAuthenticatedTo: '/',
+    // navigateAuthenticatedTo: '/',
   }
 })
 //写一个对template表单登录进行提交处理的代码
