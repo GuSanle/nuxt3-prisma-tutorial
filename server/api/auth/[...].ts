@@ -2,6 +2,10 @@ import { NuxtAuthHandler } from "#auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 export default NuxtAuthHandler({
+  pages: {
+    // Change the default behavior to use `/login` as the path for the sign-in page
+    signIn: '/login'
+  },
   // A secret string you define, to ensure correct encryption
   secret:useRuntimeConfig().authSecret,
   // pages: {
