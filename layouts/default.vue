@@ -3,8 +3,20 @@
     <title>kintone开发者社区</title>
   </head>
 
-  <div>
-    <slot />
+  <div class="common-layout">
+    <el-container>
+      <el-header>
+        <Header />
+      </el-header>
+      <el-container>
+        <el-aside width="200px">
+          <Aside />
+        </el-aside>
+        <el-main>
+          <slot />
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
   <!-- <Footer /> -->
 </template>

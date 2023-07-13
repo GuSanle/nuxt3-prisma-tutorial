@@ -1,5 +1,6 @@
 <template>
-  <div class="max-w-5xl mx-auto mt-5 px-5">
+  <div v-if="status === 'unauthenticated'"> 未登录</div>
+  <div v-else>
     <h3 class="text-xl font-bold ">Authentication Overview</h3>
     <p class="text-sm">See all available authentication & session information below.</p>
     <pre v-if="status"><span>Status:</span> {{ status }}</pre>
@@ -10,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-// definePageMeta({ auth: false })
+definePageMeta({ auth: false })
 const { data, status, getCsrfToken, getProviders } = useAuth()
 
 const providers = await getProviders()

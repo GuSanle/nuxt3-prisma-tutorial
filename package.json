@@ -9,13 +9,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.5",
     "@nuxt/devtools": "latest",
     "@sidebase/nuxt-auth": "0.5.0",
     "@types/node": "^18.16.19",
+    "element-plus": "^2.3.7",
     "nuxt": "^3.6.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "next-auth": "4.21.1"
+    "next-auth": "4.21.1",
+    "pinia": "^2.1.4"
   }
 }

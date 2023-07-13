@@ -1,9 +1,8 @@
 <template>
-  <!-- 用vue写一个form表单,包含了用户名和密码的输入框，还有一个登录，按钮。 -->
   <form>
-    <input type="text" v-model="username" placeholder="用户名" />
-    <input type="password" v-model="password" placeholder="密码" />
-    <button @click="submit">登录</button>
+    <el-input type="text" v-model="username" placeholder="用户名" />
+    <el-input type="password" v-model="password" placeholder="密码" />
+    <el-button type="success" @click="submit">登录</el-button>
   </form>
 </template>
 <script setup>
