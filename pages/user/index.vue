@@ -2,6 +2,7 @@
   <h1>用户中心</h1>
   <div v-if="show">
     <div>姓名：{{ users.name }}</div>
+    <div>session中的登录名：{{ users.loginName }}</div>
     <div>年龄：{{ users.age }}</div>
     <div>性别：{{ users.sex }}</div>
     <div>状态：{{ users.status }}</div>
