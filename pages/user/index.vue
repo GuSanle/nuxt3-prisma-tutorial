@@ -8,7 +8,7 @@
   </div>
   <el-button @click="changeStatus">改状态</el-button>
   <el-button @click="signOut()">退出</el-button>
-  <el-button @click="getInfo">调用用户api</el-button>
+  <el-button @click="getInfo">再获取一次用户信息</el-button>
 </template>;
 
 <script  setup>
@@ -20,9 +20,12 @@ const {
 } = useUsers()
 
 const show = ref(false)
+await getNewUser()
+show.value = true
+
+//再获取一次用户信息
 const getInfo = async () => {
   await getNewUser()
-  show.value = true
 }
 
 const { signOut, status } = useAuth()

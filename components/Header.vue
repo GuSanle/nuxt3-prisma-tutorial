@@ -1,7 +1,8 @@
 <template>
   <div v-if="status === 'authenticated'" class="container">
-    用户：{{ users.loginName }}
+    用户：{{ data.user.name }}
     <el-button @click="signOut()">退出</el-button>
+    <nuxt-link to='/'>home</nuxt-link>/
     <nuxt-link to='/user'>user</nuxt-link>
   </div>
   <div v-else>
@@ -10,10 +11,9 @@
 </template>;
 
 <script  setup>
-const {
-  users,
-} = useUsers()
-const { signOut, status } = useAuth()
+
+const { signOut, status, data } = useAuth()
+
 
 const login = async () => {
   await navigateTo('/login')

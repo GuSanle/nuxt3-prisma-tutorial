@@ -20,9 +20,7 @@ const submit = async () => {
   await signIn('credentials', {
     username: username.value,
     password: password.value,
-    // redirect: false,
+    redirect: false,
   })
 }
-
-
 </script>
