@@ -5,22 +5,21 @@ export default defineEventHandler(async (event) => {
   //   return { status: "unauthenticated!" };
   // }
 
-  //模拟异步请求
   const loginName = event.context.userInfo
     ? event.context.userInfo.user.name
     : "";
 
-  const userInfo = await new Promise((resolve) => {
+  const data = await new Promise((resolve) => {
     setTimeout(() => {
       resolve({
         name: "张三",
-        loginName,
         age: 60,
+        loginName,
         sex: "male",
         status: true,
       });
     }, 1000);
   });
 
-  return userInfo;
+  return data;
 });

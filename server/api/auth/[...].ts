@@ -1,13 +1,14 @@
 import { NuxtAuthHandler } from "#auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { useUserStore } from "@/stores/user";
 
 export default NuxtAuthHandler({
   pages: {
     // Change the default behavior to use `/login` as the path for the sign-in page
-    signIn: '/login'
+    signIn: "/login",
   },
   // A secret string you define, to ensure correct encryption
-  secret:useRuntimeConfig().authSecret,
+  secret: useRuntimeConfig().authSecret,
   // pages: {
   //   // Change the default behavior to use `/login` as the path for the sign-in page
   //   signIn: '/login'
@@ -33,7 +34,7 @@ export default NuxtAuthHandler({
           placeholder: "密码",
         },
       },
-      authorize(credentials:any) {
+      async authorize(credentials: any) {
         // You need to provide your own logic here that takes the credentials
         // submitted and returns either a object representing a user or value
         // that is false/null if the credentials are invalid.
@@ -43,13 +44,28 @@ export default NuxtAuthHandler({
           name: "J Smith",
           username: "jsmith",
           password: "hunter2",
+          loginName: "jack",
+          age: 18,
+          sex: "male",
+          status: false,
         };
+
+        const response: any = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(user);
+          }, 1000);
+        });
+
+        // const userStore = useUserStore();
+        // const { setUserInfo } = userStore;
+        // setUserInfo(response);
+
         if (
-          credentials?.username === user.username &&
-          credentials?.password === user.password
+          credentials?.username === response.username &&
+          credentials?.password === response.password
         ) {
           // Any object returned will be saved in `user` property of the JWT
-          return user;
+          return response;
         } else {
           // eslint-disable-next-line no-console
           console.error(
