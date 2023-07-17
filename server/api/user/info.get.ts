@@ -5,21 +5,24 @@ export default defineEventHandler(async (event) => {
   //   return { status: "unauthenticated!" };
   // }
 
-  const loginName = event.context.userInfo
-    ? event.context.userInfo.user.name
-    : "";
-
-  const data = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        name: "张三",
-        age: 60,
-        loginName,
-        sex: "male",
-        status: true,
-      });
-    }, 1000);
-  });
-
-  return data;
+  // const loginName = event.context.userInfo
+  //   ? event.context.userInfo.user.name
+  //   : "";
+  const userInfo = event.context.userInfo;
+  if (userInfo === null) {
+    return { auth: false, data: null };
+  } else {
+    const data = await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          name: "张三",
+          age: 60,
+          loginName: event.context.userInfo.user.name,
+          sex: "male",
+          status: true,
+        });
+      }, 1000);
+    });
+    return { auth: true, data };
+  }
 });

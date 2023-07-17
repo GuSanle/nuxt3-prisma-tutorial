@@ -6,7 +6,6 @@ export default eventHandler(async (event) => {
 
   if (useIsUrlInWhitelist(pathUrl)) {
     const session = await getServerSession(event);
-    console.log("session", session);
 
     if (!session) {
       event.context.userInfo = null;

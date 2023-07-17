@@ -1,23 +1,29 @@
-export const useUserStore = defineStore("user", () => {
-  const users = reactive({
-    name: "",
-    loginName: "",
-    age: 0,
-    sex: "male",
-    status: true,
-  });
+export const useUserStore = defineStore("user", {
+  state: () => {
+    return {
+      users: {
+        name: "",
+        loginName: "",
+        age: 0,
+        sex: "male",
+        status: true,
+      },
+    };
+  },
 
-  const changeStatus = () => {
-    users.status = !users.status;
-  };
+  getters: {},
 
-  const setUserInfo = (info: any) => {
-    users.name = info.value.name;
-    users.age = info.value.age;
-    users.sex = info.value.sex;
-    users.status = info.value.status;
-    users.loginName = info.value.loginName;
-  };
+  actions: {
+    changeStatus() {
+      this.users.status = !this.users.status;
+    },
 
-  return { users, changeStatus, setUserInfo };
+    setUserInfo(info: any) {
+      this.users.name = info.name;
+      this.users.age = info.age;
+      this.users.sex = info.sex;
+      this.users.status = info.status;
+      this.users.loginName = info.loginName;
+    },
+  },
 });
