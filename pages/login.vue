@@ -12,15 +12,23 @@ definePageMeta({
     // navigateAuthenticatedTo: '/',
   }
 })
-//写一个对template表单登录进行提交处理的代码
+
 const { signIn } = useAuth()
 const username = ref('')
 const password = ref('')
 const submit = async () => {
-  await signIn('credentials', {
+  const { error } = await signIn('credentials', {
     username: username.value,
     password: password.value,
     redirect: false,
   })
+
+  if (error) {
+    alert('用户名密码错误')
+  } else {
+    const requestUrl = useRequestURL()
+    const redirectUrl = requestUrl.searchParams.get("callbackUrl")
+    return navigateTo(redirectUrl, { external: true })
+  }
 }
 </script>

@@ -1,10 +1,10 @@
 import { getServerSession } from "#auth";
-import { useIsUrlInWhitelist } from "../../utils/utils";
+import { useIsUrlInPortectedlist } from "../../utils/utils";
 
 export default eventHandler(async (event) => {
   const pathUrl = getRequestPath(event);
 
-  if (useIsUrlInWhitelist(pathUrl)) {
+  if (useIsUrlInPortectedlist(pathUrl)) {
     const session = await getServerSession(event);
 
     if (!session) {
