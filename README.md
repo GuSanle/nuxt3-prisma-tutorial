@@ -42,5 +42,11 @@ export default defineNuxtConfig({
   ],
   elementPlus: { /** Options */ }
 })
-``` 
+```
+## 认证
+前台认证：
+1. 使用session认证。前端界面，使用useAuth()根据status这个接口判断是否登录，如果没有登录，跳转到登录界面。 
+后端接口
+1. 内部接口（server/routes下），使用session认证。使用server middleware对来源进行判断后，进行认证。
+2. 外部接口，使用jwt认证。 
 

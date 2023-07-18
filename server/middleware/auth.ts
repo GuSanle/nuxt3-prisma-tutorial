@@ -1,5 +1,5 @@
 import { getServerSession } from "#auth";
-import { useIsUrlInPortectedlist } from "../../utils/utils";
+import { useIsUrlInPortectedlist } from "@/utils/utils";
 
 export default eventHandler(async (event) => {
   const pathUrl = getRequestPath(event);

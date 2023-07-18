@@ -10,7 +10,7 @@ export const useUsers = () => {
   const getNewUser = async () => {
     // const headers = useRequestHeaders(["cookie"]);
     // const { data } = await useFetch("/api/user", { headers });
-    const { data } = await useFetch("/api/user/info");
+    const { data } = await useFetch("/user/info");
     //!.为ts中的非空断言
     if (data.value!.auth) {
       setUserInfo(data.value!.data);
