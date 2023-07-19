@@ -19,9 +19,22 @@ export const useUsers = () => {
     }
   };
 
+  //为domain生成token
+  const getToken = async (domain: string) => {
+    const { data } = await useFetch("/user/token", {
+      query: { domain },
+    });
+    //!.为ts中的非空断言
+    if (!data.value!.auth) {
+      userStore.$reset();
+    }
+    return data.value!.token;
+  };
+
   return {
     changeStatus,
     getNewUser,
+    getToken,
     users,
   };
 };

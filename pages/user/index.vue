@@ -6,9 +6,14 @@
     <div>性别：{{ users.sex }}</div>
     <div>状态：{{ users.status }}</div>
   </div>
+  <div>
+    <div>我的token:{{ newToken }}</div>
+    <el-input v-model="domain" placeholder="Please input" />
+  </div>
   <el-button @click="changeStatus">改状态</el-button>
   <el-button @click="signOut()">退出</el-button>
   <el-button @click="getInfo">再获取一次用户信息</el-button>
+  <el-button @click="generateToken">生成指定domain的token</el-button>
 </template>;
 
 <script  setup>
@@ -16,6 +21,7 @@
 const {
   changeStatus,
   getNewUser,
+  getToken,
   users,
 } = useUsers()
 
@@ -27,6 +33,13 @@ show.value = true
 const getInfo = async () => {
   await getNewUser()
 }
+
+const newToken = ref('')
+const domain = ref('')
+const generateToken = async () => {
+  newToken.value = await getToken(domain.value)
+}
+
 
 const { signOut, status } = useAuth()
 </script>

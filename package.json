@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "@types/jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.1",
     "next-auth": "4.21.1",
     "pinia": "^2.1.4"
   }
