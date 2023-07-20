@@ -2,6 +2,7 @@
 import { useSignJwt } from "@/utils/utils";
 
 export default defineEventHandler(async (event) => {
+  console.log(event.context);
   const userInfo = event.context.userInfo;
   if (userInfo === null) {
     return { auth: false, token: null };
