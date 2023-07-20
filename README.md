@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 ## nuxt-auth
 1. 安装
 ```
-yarn add --dev @sidebase/nuxt-auth
+yarn add -D @sidebase/nuxt-auth
 yarn add next-auth@4.21.1
 ```
 2. 配置
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 ## element ui
 1. 安装
 ```
-yarn add --dev element-plus @element-plus/nuxt
+yarn add -D element-plus @element-plus/nuxt
 ```
 2. 配置
 ```
@@ -49,4 +49,18 @@ export default defineNuxtConfig({
 后端接口
 1. 内部接口（server/routes下），使用session认证。使用server middleware对来源进行判断后，进行认证。
 2. 外部接口，使用jwt认证。 
+
+## prisma
+1. 安装
+```
+yarn add -D  prisma
+npx prisma init
+```
+2. 编辑prisma/schema.prisma
+3. 更新.env配置
+4. 添加prisma/schema.prisma的schema信息
+5. 初始化
+```
+npx prisma migrate dev --name init 
+```
 

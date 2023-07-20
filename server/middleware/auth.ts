@@ -16,7 +16,7 @@ const getApiType = (pathUrl: string) => {
 export default eventHandler(async (event) => {
   const pathUrl = getRequestPath(event);
   const apiType = getApiType(pathUrl);
-  console.log("apiType", apiType);
+  // console.log("apiType", apiType);
 
   if (apiType === "inner") {
     const session = await getServerSession(event);

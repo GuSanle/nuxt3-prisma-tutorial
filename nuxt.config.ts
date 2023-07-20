@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ["@pinia/nuxt", "@sidebase/nuxt-auth", "@element-plus/nuxt"],
+  modules: [
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@sidebase/nuxt-auth",
+    "@element-plus/nuxt",
+  ],
   pinia: {
     autoImports: [
       // automatically imports `defineStore`
