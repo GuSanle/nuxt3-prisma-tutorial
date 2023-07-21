@@ -64,3 +64,7 @@ npx prisma init
 npx prisma migrate dev --name init 
 ```
 
+## tailwindcss
+1. 安装 参考官网
+
+

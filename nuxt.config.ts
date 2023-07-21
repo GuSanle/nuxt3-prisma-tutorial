@@ -30,4 +30,11 @@ export default defineNuxtConfig({
       title: "kintone开发者社区",
     },
   },
+  css: ["~/assets/css/main.css"],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 });

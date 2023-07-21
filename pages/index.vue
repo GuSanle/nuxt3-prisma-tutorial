@@ -1,5 +1,5 @@
 <template>
-  <div v-if="status === 'unauthenticated'"> 未登录</div>
+  <div v-if="status === 'unauthenticated'" class="text-3xl font-bold underline"> 未登录</div>
   <div v-else>
     <h3 class="text-xl font-bold ">Authentication Overview</h3>
     <p class="text-sm">See all available authentication & session information below.</p>
