@@ -16,8 +16,11 @@ export default defineEventHandler(async (event) => {
   if (userInfo === null) {
     return { auth: false, data: null };
   } else {
-    const id = 1;
-    const data = await userService.findById(id);
+    const data = await userService.add({
+      name: "test",
+      email: "aaa@q.com",
+      password: "123456",
+    });
     return { auth: true, data };
   }
 });

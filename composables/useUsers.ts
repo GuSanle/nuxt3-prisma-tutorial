@@ -31,10 +31,16 @@ export const useUsers = () => {
     return data.value!.token;
   };
 
+  const add = async () => {
+    const { data } = await useFetch("/user/add", { method: "POST" });
+    return data;
+  };
+
   return {
     changeStatus,
     getNewUser,
     getToken,
+    add,
     users,
   };
 };

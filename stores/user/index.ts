@@ -20,10 +20,10 @@ export const useUserStore = defineStore("user", {
 
     setUserInfo(info: any) {
       this.users.name = info.name;
-      this.users.age = info.age;
-      this.users.sex = info.sex;
-      this.users.status = info.status;
-      this.users.loginName = info.loginName;
+      // this.users.age = info.age;
+      // this.users.sex = info.sex;
+      // this.users.status = info.status;
+      // this.users.loginName = info.loginName;
     },
   },
 });

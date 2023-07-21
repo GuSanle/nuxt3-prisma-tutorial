@@ -14,6 +14,7 @@
   <el-button @click="signOut()">退出</el-button>
   <el-button @click="getInfo">再获取一次用户信息</el-button>
   <el-button @click="generateToken">生成指定domain的token</el-button>
+  <el-button @click="addUser">添加用户</el-button>
 </template>;
 
 <script  setup>
@@ -22,16 +23,21 @@ const {
   changeStatus,
   getNewUser,
   getToken,
+  add,
   users,
 } = useUsers()
 
 const show = ref(false)
-await getNewUser()
+// await getNewUser()
 show.value = true
 
 //再获取一次用户信息
 const getInfo = async () => {
   await getNewUser()
+}
+
+const addUser = async () => {
+  await add()
 }
 
 const newToken = ref('')
