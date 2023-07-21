@@ -1,8 +1,4 @@
 <template>
-  <head>
-    <title>kintone开发者社区</title>
-  </head>
-
   <div class="common-layout">
     <el-container>
       <el-header>
@@ -18,5 +14,5 @@
       </el-container>
     </el-container>
   </div>
-  <!-- <Footer /> -->
+  <Footer />
 </template>

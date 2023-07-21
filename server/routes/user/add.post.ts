@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
   //   ? event.context.userInfo.user.name
   //   : "";
   const userService = new UserService();
-  console.log(process.env.NODE_ENV);
 
   const userInfo = event.context.userInfo;
   if (userInfo === null) {

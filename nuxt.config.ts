@@ -25,4 +25,9 @@ export default defineNuxtConfig({
     // Private keys are only available on the server
     authSecret: process.env.NUXT_AUTH_SECRET,
   },
+  app: {
+    head: {
+      title: "kintone开发者社区",
+    },
+  },
 });

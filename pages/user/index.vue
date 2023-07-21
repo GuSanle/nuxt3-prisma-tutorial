@@ -1,7 +1,7 @@
 <template>
-  <div v-if="show">
+  <div>
     <div>姓名：{{ users.name }}</div>
-    <div>session中的登录名：{{ users.loginName }}</div>
+    <div>session中的登录名:{{ users.loginName }}</div>
     <div>年龄：{{ users.age }}</div>
     <div>性别：{{ users.sex }}</div>
     <div>状态：{{ users.status }}</div>
@@ -15,7 +15,7 @@
   <el-button @click="getInfo">再获取一次用户信息</el-button>
   <el-button @click="generateToken">生成指定domain的token</el-button>
   <el-button @click="addUser">添加用户</el-button>
-</template>;
+</template>
 
 <script  setup>
 // definePageMeta({ middleware: 'auth' })
@@ -27,9 +27,9 @@ const {
   users,
 } = useUsers()
 
-const show = ref(false)
+
 // await getNewUser()
-show.value = true
+
 
 //再获取一次用户信息
 const getInfo = async () => {

@@ -8,7 +8,7 @@
   <div v-else>
     <el-button @click.prevent="login">登录</el-button>
   </div>
-</template>;
+</template>
 
 <script  setup>
 
