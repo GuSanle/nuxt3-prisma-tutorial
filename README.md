@@ -1,5 +1,5 @@
 ## nuxt 
-使用nuxt3 prisma pinia element-plus next-auth mysql来实现一个系统的模版
+使用nuxt3 prisma pinia element-plus next-auth mysql tailwindcss来实现一个系统的模版
 
 ## pinia
 1. nuxt3标配vuex，更换pinia步骤如下：

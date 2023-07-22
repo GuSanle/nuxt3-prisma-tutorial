@@ -31,8 +31,13 @@ export const useUsers = () => {
     return data.value!.token;
   };
 
-  const add = async () => {
-    const { data } = await useFetch("/user/add", { method: "POST" });
+  const add = async (name: string) => {
+    const { data } = await useFetch("/user/add", {
+      method: "POST",
+      body: {
+        name,
+      },
+    });
     return data;
   };
 

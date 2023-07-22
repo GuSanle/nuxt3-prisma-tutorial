@@ -37,7 +37,7 @@ const getInfo = async () => {
 }
 
 const addUser = async () => {
-  await add()
+  await add('test')
 }
 
 const newToken = ref('')

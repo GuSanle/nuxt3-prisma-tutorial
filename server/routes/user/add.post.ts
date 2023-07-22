@@ -9,14 +9,16 @@ export default defineEventHandler(async (event) => {
   // const loginName = event.context.userInfo
   //   ? event.context.userInfo.user.name
   //   : "";
+
   const userService = new UserService();
+  const { name } = await readBody(event);
 
   const userInfo = event.context.userInfo;
   if (userInfo === null) {
     return { auth: false, data: null };
   } else {
     const data = await userService.add({
-      name: "test",
+      name,
       email: "aaa@q.com",
       password: "123456",
     });
