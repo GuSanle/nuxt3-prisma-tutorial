@@ -67,4 +67,8 @@ npx prisma migrate dev --name init
 ## tailwindcss
 1. 安装 参考官网
 
+## csrf跨域
+请求头部有next-auth.csrf-token=xxx的csrf信息
+响应头部Set-Cookie:中有HttpOnly; SameSite=Lax。防止跨域使用cookie，阻止跨域csrf攻击。
+https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 

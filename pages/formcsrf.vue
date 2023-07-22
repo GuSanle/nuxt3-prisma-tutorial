@@ -14,17 +14,19 @@
   <div>{{ users }}</div>
 </template>
 <script setup>
-const {
-  add,
-  users,
-} = useUsers()
+definePageMeta({ auth: false })
 
 const formData = reactive({
   username: '',
   phone: '',
 })
 const submit = async () => {
-  console.log(123)
-  await add('报名人')
+  const { data } = await useFetch("/user/csrftest", {
+    method: "POST",
+    body: {
+      name: formData.username
+    },
+  });
+  console.log(data)
 }
 </script>
