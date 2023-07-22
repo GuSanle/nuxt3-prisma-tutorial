@@ -11,7 +11,6 @@
       <el-button type="success" @click="submit">提交</el-button>
     </el-form-item>
   </el-form>
-  <div>{{ users }}</div>
 </template>
 <script setup>
 definePageMeta({ auth: false })
