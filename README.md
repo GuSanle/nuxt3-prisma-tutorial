@@ -32,7 +32,13 @@ npx prisma migrate dev --name init
 ```
 
 ## tailwindcss
-
+安装tailwindcss后会报tsconfig.json的错误。应该是server端不需要引入tailwind，所以直接在tsconfig.json中排除
+```
+  "exclude": [
+    "../tailwind.config.js"
+  ]
+```
+  
 
 ## csrf跨域
 请求头部有next-auth.csrf-token=xxx的csrf信息

@@ -16,7 +16,7 @@
     "@types/node": "^18.16.19",
     "autoprefixer": "^10.4.14",
     "element-plus": "^2.3.7",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.6.5",
     "nuxt-security": "^0.14.2",
     "postcss": "^8.4.26",
     "prisma": "^5.0.0",
