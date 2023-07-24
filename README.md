@@ -48,4 +48,5 @@ https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 ## nuxt-security
 具体配置：https://nuxt-security.vercel.app/getting-started/configuration
 basicAuth，csrf不需要开，已经通过next-auth解决了。
+nuxt-security会导致调试等模式打不开，开发模式中nuxt.config.ts中modules的nuxt-security模式不开启。部署模式再开启
 

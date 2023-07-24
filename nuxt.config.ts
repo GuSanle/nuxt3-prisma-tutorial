@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: [
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@sidebase/nuxt-auth",
     "@element-plus/nuxt",
-    "nuxt-security",
+    // "nuxt-security",
   ],
   pinia: {
     autoImports: [

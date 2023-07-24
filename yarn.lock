@@ -754,19 +754,19 @@
   resolved "https://registry.npmmirror.com/@nuxt/devalue/-/devalue-2.0.2.tgz#5749f04df13bda4c863338d8dabaf370f45ef7c7"
   integrity sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==
 
-"@nuxt/devtools-kit@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmmirror.com/@nuxt/devtools-kit/-/devtools-kit-0.7.0.tgz#2385db3792e7a87da0b445fbb3c720ebf81a9f58"
-  integrity sha512-cbSeiIjWau2LxNgo1YHmUunA88IQEESJOlYgpJFxyOkDXzpKaR6xA0i6MT0zZTmQFCkT+u7DtExdp999icbwXQ==
+"@nuxt/devtools-kit@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.npmmirror.com/@nuxt/devtools-kit/-/devtools-kit-0.7.1.tgz#a5631333f5af41c3993c83f258d2560f28fe67b2"
+  integrity sha512-g7OgrU0VlW9fibLdHmhad4tEQzkS4g8yxaqDD/Kri/i3mEOeS7w9E8x7kkA/56FmmnXe6F6lCcLqG6u3FYW6WA==
   dependencies:
-    "@nuxt/kit" "^3.6.2"
-    "@nuxt/schema" "^3.6.2"
+    "@nuxt/kit" "^3.6.5"
+    "@nuxt/schema" "^3.6.5"
     execa "^7.1.1"
 
-"@nuxt/devtools-wizard@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmmirror.com/@nuxt/devtools-wizard/-/devtools-wizard-0.7.0.tgz#a44efb9f4bd3fa04495bf02fe4c0ae58ab6175c0"
-  integrity sha512-YUHxV8cN6SPqX/uQyLgJ9txcc8IJkG6nsBgfdrLjAkqNU7+/KFpjR0WgpFJNfPqYVpK19mENFTmvBXaBE4kv1A==
+"@nuxt/devtools-wizard@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.npmmirror.com/@nuxt/devtools-wizard/-/devtools-wizard-0.7.1.tgz#b01f8d21fd0b3d0bbb60403dcebf44bc9338f46e"
+  integrity sha512-WZ8kdb9yfqgXn77ors9ojykb0wh0/+OdvgLEQt1xmwZxbWP5PPMqS/mcCUtKEuoYF2SM5aMBSPoXz90TJ/DfHQ==
   dependencies:
     consola "^3.2.3"
     diff "^5.1.0"
@@ -781,20 +781,20 @@
     semver "^7.5.4"
 
 "@nuxt/devtools@latest":
-  version "0.7.0"
-  resolved "https://registry.npmmirror.com/@nuxt/devtools/-/devtools-0.7.0.tgz#0aff36e90186db9986e33cad44cf957a2d60fb4d"
-  integrity sha512-2r4766kZGTPZcs+o/YcobITc6lBsfsbuz18P+N5hqUXWc6evcWFf2fQXsMYJaD377mSwS1acxuHSrhI/WEYtMg==
+  version "0.7.1"
+  resolved "https://registry.npmmirror.com/@nuxt/devtools/-/devtools-0.7.1.tgz#105e313c29c6a536f50b1756a0f1c7bd9f1a2ad8"
+  integrity sha512-fwtsfv6vezD8AAKZO2rCwMc+jBsylP1AWF7WncCjr6KeOLoTjS38aOelO03XvrR61B1t4Vt44S/3afUPkmIEFQ==
   dependencies:
-    "@nuxt/devtools-kit" "0.7.0"
-    "@nuxt/devtools-wizard" "0.7.0"
-    "@nuxt/kit" "^3.6.2"
+    "@nuxt/devtools-kit" "0.7.1"
+    "@nuxt/devtools-wizard" "0.7.1"
+    "@nuxt/kit" "^3.6.5"
     birpc "^0.2.12"
     boxen "^7.1.1"
     consola "^3.2.3"
     error-stack-parser-es "^0.1.0"
     execa "^7.1.1"
     fast-folder-size "^2.1.0"
-    fast-glob "^3.3.0"
+    fast-glob "^3.3.1"
     get-port-please "^3.0.1"
     global-dirs "^3.0.1"
     h3 "^1.7.1"
@@ -814,13 +814,13 @@
     semver "^7.5.4"
     sirv "^2.0.3"
     unimport "^3.1.0"
-    vite-plugin-inspect "^0.7.32"
+    vite-plugin-inspect "^0.7.33"
     vite-plugin-vue-inspector "^3.4.2"
     wait-on "^7.0.1"
     which "^3.0.1"
     ws "^8.13.0"
 
-"@nuxt/kit@3.6.5", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.1.0", "@nuxt/kit@^3.2.2", "@nuxt/kit@^3.2.3", "@nuxt/kit@^3.3.3", "@nuxt/kit@^3.5.0", "@nuxt/kit@^3.6.2", "@nuxt/kit@^3.6.5":
+"@nuxt/kit@3.6.5", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.1.0", "@nuxt/kit@^3.2.2", "@nuxt/kit@^3.2.3", "@nuxt/kit@^3.3.3", "@nuxt/kit@^3.5.0", "@nuxt/kit@^3.6.5":
   version "3.6.5"
   resolved "https://registry.npmmirror.com/@nuxt/kit/-/kit-3.6.5.tgz#208777acdc2a09109fbe4209aad736874eb9a3f5"
   integrity sha512-uBI5I2Zx6sk+vRHU+nBmifwxg/nyXCGZ1g5hUKrUfgv1ZfiKB8JkN5T9iRoduDOaqbwM6XSnEl1ja73iloDcrw==
@@ -843,7 +843,7 @@
     unimport "^3.0.14"
     untyped "^1.3.2"
 
-"@nuxt/schema@3.6.5", "@nuxt/schema@^3.6.2":
+"@nuxt/schema@3.6.5", "@nuxt/schema@^3.6.5":
   version "3.6.5"
   resolved "https://registry.npmmirror.com/@nuxt/schema/-/schema-3.6.5.tgz#c66cf331625b41a01d510bd9e0f1227e1ff8664a"
   integrity sha512-UPUnMB0W5TZ/Pi1fiF71EqIsPlj8LGZqzhSf8wOeh538KHwxbA9r7cuvEUU92eXRksOZaylbea3fJxZWhOITVw==
@@ -1264,16 +1264,16 @@
   integrity sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==
 
 "@vue-macros/common@^1.3.1":
-  version "1.5.0"
-  resolved "https://registry.npmmirror.com/@vue-macros/common/-/common-1.5.0.tgz#834e19a14b3da5882cd738c26fd869e9e53c49eb"
-  integrity sha512-/Xtmxigolh4NwyLQfrBv+8PAIhlB3doBH7JcA0WuSMmi5LzGOK3YzDCp5jMzpXB6OoUGmm1ZaDkJcBsEmijFPw==
+  version "1.6.0"
+  resolved "https://registry.npmmirror.com/@vue-macros/common/-/common-1.6.0.tgz#be61b3c5b45cb1d670c84cce760d97bd92983b1f"
+  integrity sha512-sgDo9qN5DI0y7FJ+E0qOxhcsrBlVNp0erW5mfLzYtGYRFfuuIS5hEanNao7QZWVmK39kvmNOPbPOV1oiWBMrng==
   dependencies:
     "@babel/types" "^7.22.5"
     "@rollup/pluginutils" "^5.0.2"
     "@vue/compiler-sfc" "^3.3.4"
-    ast-kit "^0.6.7"
+    ast-kit "^0.9.4"
     local-pkg "^0.4.3"
-    magic-string-ast "^0.1.3"
+    magic-string-ast "^0.2.0"
 
 "@vue/babel-helper-vue-transform-on@^1.1.5":
   version "1.1.5"
@@ -1589,10 +1589,10 @@ assert@^2.0.0:
     object-is "^1.0.1"
     util "^0.12.0"
 
-ast-kit@^0.6.7:
-  version "0.6.9"
-  resolved "https://registry.npmmirror.com/ast-kit/-/ast-kit-0.6.9.tgz#67b2c22f965d6d5f1dbbc86a137c59b9d0e81153"
-  integrity sha512-2XZi+wqlluYQcxJ1G8qE/U0IeO5CbxUyv1lnSdD7ByJtd5Z3+1063Q6IHbRaYkka1Kb6WgGqEkBrSMaBtbHuFQ==
+ast-kit@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.npmmirror.com/ast-kit/-/ast-kit-0.9.4.tgz#e183def6966f12edd4619bf57d4093ecc1001d4a"
+  integrity sha512-UrZHsdj87OS6NM+IXRii+asdAUA/P0SMa4r1NrZvsUy72hDvCYwk8c9PsbKf1MvJ0BvP+rF1B8tFP54eT370Tg==
   dependencies:
     "@babel/parser" "^7.22.7"
     "@rollup/pluginutils" "^5.0.2"
@@ -2788,7 +2788,7 @@ fast-folder-size@^2.1.0:
     decompress "^4.2.1"
     https-proxy-agent "^7.0.0"
 
-fast-glob@^3.2.12, fast-glob@^3.2.7, fast-glob@^3.3.0:
+fast-glob@^3.2.12, fast-glob@^3.2.7, fast-glob@^3.3.0, fast-glob@^3.3.1:
   version "3.3.1"
   resolved "https://registry.npmmirror.com/fast-glob/-/fast-glob-3.3.1.tgz#784b4e897340f3dbbef17413b3f11acf03c874c4"
   integrity sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==
@@ -3848,12 +3848,12 @@ lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
   resolved "https://registry.npmmirror.com/lru-cache/-/lru-cache-7.18.3.tgz#f793896e0fd0e954a59dfdd82f0773808df6aa89"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
-magic-string-ast@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.npmmirror.com/magic-string-ast/-/magic-string-ast-0.1.3.tgz#7b2153651ff3e1e1cb0e46ac05a300defa542a2c"
-  integrity sha512-nnNhBSh8QAd90n3CQeyxKlXY4TKJ4PNjFRi7Ofs1dAr239k6H4CYAaAR4ZKRrWZNBvh1IUTl5dYP91t9dKDjig==
+magic-string-ast@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmmirror.com/magic-string-ast/-/magic-string-ast-0.2.0.tgz#8881194ff372c374b5960e9c9e92ae7c86923080"
+  integrity sha512-GHev7SFZZrIFy+ZyNJOJpK88KoGSn6FUOhGJXSdHhPt7Q6htJKTiKkdGcJFKp9Tt3P4SIL/P+ro0jZ7BSV8KMw==
   dependencies:
-    magic-string "^0.30.0"
+    magic-string "^0.30.1"
 
 magic-string@^0.27.0:
   version "0.27.0"
@@ -4794,9 +4794,9 @@ pify@^3.0.0:
   integrity sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==
 
 pinia-plugin-persistedstate@>=3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.1.0.tgz#eada2b61ecd478fce88e490a685210415cd7a1b4"
-  integrity sha512-8UN+vYMEPBdgNLwceY08mi5olI0wkYaEb8b6hD6xW7SnBRuPydWHlEhZvUWgNb/ibuf4PvufpvtS+dmhYjJQOw==
+  version "3.2.0"
+  resolved "https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.2.0.tgz#9932ca2ae88aa6c0d6763bebc6447d7bd1f097d0"
+  integrity sha512-tZbNGf2vjAQcIm7alK40sE51Qu/m9oWr+rEgNm/2AWr1huFxj72CjvpQcIQzMknDBJEkQznCLAGtJTIcLKrKdw==
 
 pinia@>=2.1.0, pinia@^2.1.4:
   version "2.1.4"
@@ -6185,7 +6185,7 @@ vite-plugin-checker@^0.6.1:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-uri "^3.0.2"
 
-vite-plugin-inspect@^0.7.32:
+vite-plugin-inspect@^0.7.33:
   version "0.7.33"
   resolved "https://registry.npmmirror.com/vite-plugin-inspect/-/vite-plugin-inspect-0.7.33.tgz#02b8c8f828016dd492f5339bc23446374b26a395"
   integrity sha512-cQRLQKa/+Ua++5hN0IZfqNn1JYXBg2eCQOSUatPTwhXMO7nwfSvhhSc45E1nXfBBEhzLLOxgr1OdbDu55PiDDA==
@@ -6199,9 +6199,9 @@ vite-plugin-inspect@^0.7.32:
     sirv "^2.0.3"
 
 vite-plugin-vue-inspector@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.npmmirror.com/vite-plugin-vue-inspector/-/vite-plugin-vue-inspector-3.4.2.tgz#6fe5757ca7d2ffac3721510587e2b8bc2791f040"
-  integrity sha512-q5OTkcZJqL78bwGJl1Zk8CNqtxZ9wP2udJYqyFIZzL1lTax0/oq7DhNkLrnPTxkJuf0QPZKdunb1vDyCByn4dQ==
+  version "3.5.0"
+  resolved "https://registry.npmmirror.com/vite-plugin-vue-inspector/-/vite-plugin-vue-inspector-3.5.0.tgz#09819a2f8863d1b43151c94bd7474aec3fc1dd24"
+  integrity sha512-dDoxEi5VWkfsKflVUYxElC3XD/MOn8s/6mjCqWRDlFIQ+OsY0cW5PNTbqxGllbBBCr5SDnDmPWFS1vMJxrLVEw==
   dependencies:
     "@babel/core" "^7.21.3"
     "@babel/plugin-syntax-import-meta" "^7.10.4"
