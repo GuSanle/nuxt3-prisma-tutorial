@@ -16,7 +16,6 @@ const getApiType = (pathUrl: string) => {
 export default eventHandler(async (event) => {
   const pathUrl = getRequestPath(event);
   const apiType = getApiType(pathUrl);
-  // console.log("apiType", apiType);
 
   if (apiType === "inner") {
     const session = await getServerSession(event);
@@ -26,13 +25,11 @@ export default eventHandler(async (event) => {
       if ("user" in session) event.context.userInfo = session;
     }
   } else if (apiType === "external") {
-    const authorization: any = getHeader(event, "authorization");
-    const decode = useVerifyJwt(authorization);
-    event.context.userInfo = decode;
-    try {
+    const authorization: string | undefined = getHeader(event, "authorization");
+    if (typeof authorization === "string") {
       const decode = useVerifyJwt(authorization);
       event.context.userInfo = decode;
-    } catch {
+    } else {
       throw createError({ statusMessage: "Unauthenticated", statusCode: 403 });
     }
   }
