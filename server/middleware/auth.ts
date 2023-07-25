@@ -19,8 +19,10 @@ export default eventHandler(async (event) => {
 
   if (apiType === "inner") {
     const session = await getServerSession(event);
+    // throw createError("我错了，我来自server端中间件");
     if (!session) {
       event.context.userInfo = null;
+      throw createError("没有登录");
     } else {
       if ("user" in session) event.context.userInfo = session;
     }

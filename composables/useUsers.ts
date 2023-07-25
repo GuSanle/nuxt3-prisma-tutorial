@@ -11,6 +11,9 @@ export const useUsers = () => {
     // const headers = useRequestHeaders(["cookie"]);
     // const { data } = await useFetch("/api/user", { headers });
     const { data } = await useFetch("/user/info");
+    // if (!data.value) {
+    //   throw createError({ statusCode: 403, statusMessage: "出错了" });
+    // }
     //!.为ts中的非空断言
     if (data.value!.auth) {
       setUserInfo(data.value!.data);

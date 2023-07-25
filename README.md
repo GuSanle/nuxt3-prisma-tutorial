@@ -50,3 +50,21 @@ https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 basicAuth，csrf不需要开，已经通过next-auth解决了。
 nuxt-security会导致调试等模式打不开，开发模式中nuxt.config.ts中modules的nuxt-security模式不开启。部署模式再开启
 
+## 错误处理的几种方式
+1 plugins/vueAppErrorHandler.ts
+2 通过root下的error.vue来捕获错误。直接跳转错误画面。
+3 组件级别的错误处理。- <NuxtErrorBoundary>让错误只发生在组件上。原理同onErrorCaptured
+抛错顺序：<NuxtErrorBoundary>组件级别的错误处理 > plugins/vueAppErrorHandler.ts > error.vue
+4 showError()客户端会显示错误，throw createError不会。
+
+总结：
+组件级别错误的处理使用
+1 组件内报错<NuxtErrorBoundary>    
+2 error.vue处理整体报错。
+  服务端渲染只需要在error.vue中处理即可。但是客户端需要在plugins/vueAppErrorHandler.ts中处理。
+3 demo： 1 about/abouttwo页面。 
+         2 服务端中间件session注销后报错
+
+
+
+
