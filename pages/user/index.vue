@@ -27,7 +27,7 @@ const {
 } = useUsers()
 
 
-// await getNewUser()
+await getNewUser()
 
 
 //再获取一次用户信息
