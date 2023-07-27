@@ -26,16 +26,10 @@ export default defineNuxtConfig({
     // Private keys are only available on the server
     authSecret: process.env.NUXT_AUTH_SECRET,
   },
+  css: ["@/assets/css/reset.css"],
   app: {
     head: {
-      title: "kintone开发者社区",
-    },
-  },
-  css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+      title: "kintone开放平台",
     },
   },
 });

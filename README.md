@@ -1,5 +1,5 @@
 ## nuxt 
-使用nuxt3 prisma pinia element-plus next-auth mysql nuxt-security tailwindcss来实现一个系统的模版
+使用nuxt3 prisma pinia element-plus next-auth mysql nuxt-security scss来实现一个系统的模版
 
 ## pinia
 1. 放置位置：
@@ -32,13 +32,15 @@ npx prisma migrate dev --name init
 ```
 
 ## tailwindcss
+怕和element有冲突，所以不使用了
 安装tailwindcss后会报tsconfig.json的错误。应该是server端不需要引入tailwind，所以直接在tsconfig.json中排除
 ```
   "exclude": [
     "../tailwind.config.js"
   ]
 ```
-  
+## css
+重置浏览器样式 @/assets/css/reset.css
 
 ## csrf跨域
 请求头部有next-auth.csrf-token=xxx的csrf信息

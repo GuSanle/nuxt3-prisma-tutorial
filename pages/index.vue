@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ auth: false })
+// definePageMeta({ auth: false })
 const { data: user, status, getCsrfToken, getProviders } = useAuth()
 
 const providers = await getProviders()
