@@ -26,9 +26,18 @@ npx prisma init
 2. 编辑prisma/schema.prisma
 3. 更新.env配置
 4. 添加prisma/schema.prisma的schema信息
-5. 初始化
+5. package.json中添加prisma的指令
 ```
+  "prisma": {
+    "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  }
+```
+7. 初始化
+```
+//初始化数据库
 npx prisma migrate dev --name init 
+//初始化数据
+npx prisma db seed
 ```
 
 ## tailwindcss

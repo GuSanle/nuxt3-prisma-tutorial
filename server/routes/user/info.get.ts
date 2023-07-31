@@ -1,4 +1,4 @@
-import { UserService } from "../../service/user.service";
+import { UserService } from "@/service/user.service";
 
 export default defineEventHandler(async (event) => {
   // const session = await getServerSession(event);
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   if (userInfo === null) {
     return { auth: false, data: null };
   } else {
-    const id = 1;
+    const id = 2;
     const data = await userService.findById(id);
     return { auth: true, data };
   }

@@ -6,7 +6,7 @@
       </el-aside>
       <el-container>
         <el-header>
-          <Header />
+          <Navbar />
         </el-header>
         <el-main>
           <slot />

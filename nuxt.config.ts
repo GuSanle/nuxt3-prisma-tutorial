@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@sidebase/nuxt-auth",
     "@element-plus/nuxt",
+    "@unocss/nuxt",
     // "nuxt-security",
   ],
   pinia: {

@@ -1,4 +1,4 @@
-import { UserService } from "../../service/user.service";
+import { UserService } from "@/service/user.service";
 
 export default defineEventHandler(async (event) => {
   // const session = await getServerSession(event);

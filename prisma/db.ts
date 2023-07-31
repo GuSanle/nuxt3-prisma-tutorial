@@ -12,4 +12,4 @@ const db = global.__db || new PrismaClient();
 
 if (process.env.NODE_ENV === "development") global.__db = db;
 
-export { db };
+export default db;
