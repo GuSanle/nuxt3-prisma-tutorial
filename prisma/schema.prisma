@@ -9,7 +9,7 @@ datasource db {
 
 model Users {
   id             Int       @id @default(autoincrement())
-  uuid           String    @unique @db.VarChar(60)
+  uuid           String    @unique @default(uuid()) @db.VarChar(60)
   email          String    @unique @db.VarChar(255)
   phone          String?   @unique @db.VarChar(255)
   password       String    @db.VarChar(255)

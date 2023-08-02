@@ -1,8 +1,13 @@
 import prisma from "@/prisma/db";
-import { Prisma } from "@prisma/client";
+import { Users, Prisma } from "@prisma/client";
 
 export class UserService {
-  async createUser(users: Prisma.UsersCreateInput) {
+  /**
+   * 添加用户
+   * @param users
+   * @returns
+   */
+  async createUser(users: Prisma.UsersCreateInput): Promise<Users> {
     if (users.email) {
       const exist = await prisma.users.findUnique({
         where: {
@@ -16,30 +21,48 @@ export class UserService {
     return await prisma.users.create({ data: users });
   }
 
-  async findAll(): Promise<object | null> {
-    return await prisma.users.findMany();
-  }
-  async findById(id: number): Promise<object | null> {
-    return prisma.users.findUnique({
-      where: {
-        id,
-      },
-      select: {
-        id: true,
-        name: true,
-      },
+  async updateUser(params: {
+    where: Prisma.UsersWhereUniqueInput;
+    data: Prisma.UsersUpdateInput;
+  }): Promise<Users> {
+    const { where, data } = params;
+    return prisma.users.update({
+      data,
+      where,
     });
   }
-  async login(): Promise<object | null> {
-    return await prisma.users.findMany();
+
+  async findFirst(): Promise<Users | null> {
+    // const { where } = params;
+    return prisma.users.findFirst();
   }
-  async add(data: any): Promise<object | null> {
-    return prisma.users.create({ data });
-  }
-  async delete(): Promise<object | null> {
-    return await prisma.users.findMany();
-  }
-  async update(): Promise<object | null> {
-    return await prisma.users.findMany();
-  }
+
+  // async emailLogin() {}
+
+  // async findAll(): Promise<object | null> {
+  //   return await prisma.users.findMany();
+  // }
+  // async findById(id: number): Promise<object | null> {
+  //   return prisma.users.findUnique({
+  //     where: {
+  //       id,
+  //     },
+  //     select: {
+  //       id: true,
+  //       name: true,
+  //     },
+  //   });
+  // }
+  // async login(): Promise<object | null> {
+  //   return await prisma.users.findMany();
+  // }
+  // async add(data: any): Promise<object | null> {
+  //   return prisma.users.create({ data });
+  // }
+  // async delete(): Promise<object | null> {
+  //   return await prisma.users.findMany();
+  // }
+  // async update(): Promise<object | null> {
+  //   return await prisma.users.findMany();
+  // }
 }

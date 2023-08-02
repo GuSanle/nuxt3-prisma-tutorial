@@ -1,17 +1,14 @@
 import { PrismaClient } from "@prisma/client";
-import * as crypto from "crypto";
 import * as bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
-const uuid = crypto.randomUUID();
-const adminPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10);
+const adminPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD as string, 10);
 
 async function main() {
   const admin = await prisma.users.upsert({
     where: { email: "slgu@cybozu.cn" },
     update: {},
     create: {
-      uuid,
       email: "slgu@cybozu.cn",
       name: "slgu",
       password: adminPassword,

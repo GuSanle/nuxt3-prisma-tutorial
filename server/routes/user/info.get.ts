@@ -12,11 +12,7 @@ export default defineEventHandler(async (event) => {
   const userService = new UserService();
 
   const userInfo = event.context.userInfo;
-  if (userInfo === null) {
-    return { auth: false, data: null };
-  } else {
-    const id = 2;
-    const data = await userService.findById(id);
-    return { auth: true, data };
-  }
+
+  const data = await userService.findFirst();
+  return { auth: true, data };
 });

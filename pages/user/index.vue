@@ -27,7 +27,7 @@ const {
 } = useUsers()
 
 
-await getNewUser()
+
 
 
 //再获取一次用户信息
@@ -36,7 +36,7 @@ const getInfo = async () => {
 }
 
 const addUser = async () => {
-  await add('test')
+  await add('qqq')
 }
 
 const newToken = ref('')

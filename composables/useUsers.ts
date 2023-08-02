@@ -10,15 +10,22 @@ export const useUsers = () => {
   const getNewUser = async () => {
     // const headers = useRequestHeaders(["cookie"]);
     // const { data } = await useFetch("/api/user", { headers });
-    const { data } = await useFetch("/user/info");
+    const { error, data } = await useFetch("/user/info");
     // if (!data.value) {
     //   throw createError({ statusCode: 403, statusMessage: "出错了" });
     // }
     //!.为ts中的非空断言
-    if (data.value!.auth) {
-      setUserInfo(data.value!.data);
-    } else {
+
+    if (error.value) {
       userStore.$reset();
+      console.log(error.value);
+      throw createError({
+        statusCode: 500,
+        statusMessage: "出错",
+        fatal: true,
+      });
+    } else {
+      setUserInfo(data.value!.data);
     }
   };
 
@@ -35,12 +42,20 @@ export const useUsers = () => {
   };
 
   const add = async (name: string) => {
-    const { data } = await useFetch("/user/add", {
+    const { error, data } = await useFetch("/user/add", {
       method: "POST",
       body: {
         name,
       },
     });
+    if (error.value) {
+      console.log(error.value);
+      throw createError({
+        statusCode: 500,
+        statusMessage: "出错",
+        fatal: true,
+      });
+    }
     return data;
   };
 

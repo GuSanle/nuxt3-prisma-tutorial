@@ -39,6 +39,12 @@ npx prisma migrate dev --name init
 //初始化数据
 npx prisma db seed
 ```
+8. 模型推断的官方说明需要多加阅读
+prisma/client 中的Prisma包含了输入输出，查询等的类型，比如Prisma.XXXCreateInput，Prisma.XXXUpdateInput，Prisma.XXXWhereUniqueInput，Prisma.XXXWhereInput
+import { Users, Prisma } from "@prisma/client"; prisma只要生成模型后，这些类型都能自动生成。
+然后是指定select后的生成的数据类型，包括还有嵌套语法生成的数据类型。使用Prisma validator生成。
+具体参考文档：https://www.prisma.io/docs/concepts/components/prisma-client/advanced-type-safety
+
 
 ## tailwindcss
 怕和element有冲突，所以不使用了
