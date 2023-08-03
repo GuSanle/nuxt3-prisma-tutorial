@@ -15,27 +15,27 @@
     "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@sidebase/nuxt-auth": "0.5.0",
     "@types/bcrypt": "^5.0.0",
-    "@types/node": "^18.16.19",
-    "@unocss/nuxt": "^0.53.6",
-    "@unocss/preset-icons": "^0.54.0",
-    "@unocss/preset-uno": "^0.53.6",
+    "@types/node": "^20.4.6",
+    "@unocss/nuxt": "^0.54.1",
+    "@unocss/preset-icons": "^0.54.1",
+    "@unocss/preset-uno": "^0.54.1",
     "autoprefixer": "^10.4.14",
-    "element-plus": "^2.3.7",
+    "element-plus": "^2.3.8",
     "nuxt": "^3.6.5",
-    "nuxt-security": "^0.14.2",
-    "postcss": "^8.4.26",
-    "prisma": "^5.1.0",
-    "sass": "^1.64.1"
+    "nuxt-security": "^0.14.4",
+    "postcss": "^8.4.27",
+    "prisma": "^5.1.1",
+    "sass": "^1.64.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "@prisma/client": "^5.1.0",
+    "@prisma/client": "^5.1.1",
     "@types/jsonwebtoken": "^9.0.2",
     "bcrypt": "^5.1.0",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.1",
     "next-auth": "4.21.1",
-    "pinia": "^2.1.4"
+    "pinia": "^2.1.6"
   },
   "prisma": {
     "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
