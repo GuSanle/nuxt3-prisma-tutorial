@@ -3,30 +3,23 @@ import { useUserStore } from "@/stores/user/index";
 
 export const useUsers = () => {
   const userStore = useUserStore();
-  const { changeStatus, setUserInfo } = userStore;
-  const { users } = storeToRefs(userStore);
+  const { getUserProfile } = userStore;
+  const { userInfo } = storeToRefs(userStore);
 
   //获取数据后，添加到store中
   const getNewUser = async () => {
-    // const headers = useRequestHeaders(["cookie"]);
-    // const { data } = await useFetch("/api/user", { headers });
-    const { error, data } = await useFetch("/user/info");
-    // if (!data.value) {
-    //   throw createError({ statusCode: 403, statusMessage: "出错了" });
+    // const { error, data } = await useFetch("/user/info");
+    // if (error.value) {
+    //   userStore.$reset();
+    //   console.log(error.value);
+    //   throw createError({
+    //     statusCode: 500,
+    //     statusMessage: "出错",
+    //     fatal: true,
+    //   });
+    // } else {
+    //   setUserInfo(data.value!.data);
     // }
-    //!.为ts中的非空断言
-
-    if (error.value) {
-      userStore.$reset();
-      console.log(error.value);
-      throw createError({
-        statusCode: 500,
-        statusMessage: "出错",
-        fatal: true,
-      });
-    } else {
-      setUserInfo(data.value!.data);
-    }
   };
 
   //为domain生成token
@@ -60,10 +53,10 @@ export const useUsers = () => {
   };
 
   return {
-    changeStatus,
+    getUserProfile,
     getNewUser,
     getToken,
     add,
-    users,
+    userInfo,
   };
 };

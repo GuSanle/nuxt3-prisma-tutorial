@@ -1,9 +1,10 @@
 <template>
-  <div class="container flex justify-end items-center border-b-solid border-b-gray-200 ">
+  <div class="container flex justify-end items-center border-b-solid border-b-gray-200 h-16">
+    <div><span>{{ userInfo.username }}</span></div>
     <div id="userInfo" class="m-2">
       <el-dropdown trigger="click">
         <div class="flex justify-center items-center">
-          <el-avatar shape="square" :size="30" src="" />
+          <el-avatar :size="40" :src="userInfo.avatar || '/cybozu-bg.png'" />
           <el-icon class="i-ep:caret-bottom"></el-icon>
         </div>
         <template #dropdown>
@@ -19,6 +20,7 @@
 
 <script setup lang="ts">
 const { signOut, status, data } = useAuth()
+const { userInfo } = useUsers()
 
 /**
  * 注销

@@ -7,6 +7,7 @@ declare global {
       NODE_ENV: string;
       DATABASE_URL: string;
       KINTONE_API_TOKEN: string;
+      ADMIN_USERNAME: string;
       ADMIN_PASSWORD: string;
     }
   }

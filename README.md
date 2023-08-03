@@ -1,5 +1,5 @@
 ## nuxt 
-使用nuxt3 prisma pinia element-plus next-auth mysql nuxt-security scss来实现一个系统的模版
+使用nuxt3 prisma pinia element-plus nuxt-auth mysql nuxt-security unocss来实现一个系统的模版
 
 ## pinia
 1. 放置位置：

@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 export const useIsUrlInPortectedlist = (pathUrl: string) => {
   for (const pattern of useAppConfig().protectedList) {
@@ -31,4 +32,17 @@ export const useVerifyJwt = (token: string) => {
   const secret = useRuntimeConfig().authSecret;
   const decoded = jwt.verify(token.split(" ")[1], secret);
   return decoded;
+};
+
+//加密用户密码
+export const bcryptPassword = (password: string) => {
+  return bcrypt.hashSync(password, 10);
+};
+
+//判断密码是否正确
+export const validatePassword = (inputPassword: string, password: string) => {
+  console.log("validatePassword");
+  const data = bcrypt.compareSync(inputPassword, password);
+  console.log(data);
+  return data;
 };

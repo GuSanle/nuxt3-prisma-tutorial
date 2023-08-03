@@ -1,5 +1,6 @@
 import prisma from "@/prisma/db";
 import { Users, Prisma } from "@prisma/client";
+import { validatePassword } from "@/utils/utils";
 
 export class UserService {
   /**
@@ -7,18 +8,19 @@ export class UserService {
    * @param users
    * @returns
    */
-  async createUser(users: Prisma.UsersCreateInput): Promise<Users> {
-    if (users.email) {
+  async createUser(user: Prisma.UsersCreateInput): Promise<Users> {
+    if (user.username) {
       const exist = await prisma.users.findUnique({
         where: {
-          email: users.email,
+          username: user.username,
         },
       });
       if (exist) {
         return exist;
       }
     }
-    return await prisma.users.create({ data: users });
+    user.password = bcryptPassword(user.password);
+    return await prisma.users.create({ data: user });
   }
 
   async updateUser(params: {
@@ -35,6 +37,17 @@ export class UserService {
   async findFirst(): Promise<Users | null> {
     // const { where } = params;
     return prisma.users.findFirst();
+  }
+
+  //根据用户名密码登录
+  async login(username: string, password: string): Promise<boolean> {
+    const user = await prisma.users.findUnique({
+      where: {
+        username,
+      },
+    });
+    const status = user ? validatePassword(password, user.password) : false;
+    return status;
   }
 
   // async emailLogin() {}

@@ -3,10 +3,10 @@
     <el-card class="box-card" shadow="always">
       <template #header>
         <div class="card-header">
-          <span>kintone系统</span>
+          <span>kintone开放平台</span>
         </div>
       </template>
-      <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="120px" class="demo-ruleForm" status-icon>
+      <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="120px" status-icon>
         <el-form-item label="用户名" prop="username" required>
           <el-input type="text" v-model="ruleForm.username" placeholder="用户名" size="large" class=" " />
         </el-form-item>
@@ -23,6 +23,7 @@
 </template>
 <script lang="ts" setup>
 import type { FormInstance, FormRules } from 'element-plus'
+const { getUserProfile } = useUsers()
 interface RuleForm {
   username: string
   password: string
@@ -43,7 +44,6 @@ definePageMeta({
 const rules = reactive<FormRules<RuleForm>>({
   username: [
     { required: true, message: '请输入用户名', trigger: 'blur' },
-    { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' },
   ],
   password: [
     { required: true, message: '请输入密码', trigger: 'blur' },
@@ -53,7 +53,6 @@ const rules = reactive<FormRules<RuleForm>>({
 const { signIn } = useAuth()
 
 const submitForm = async (formEl: FormInstance | undefined) => {
-
   if (!formEl) return
   formEl.validate(async (valid) => {
     if (valid) {
@@ -64,8 +63,9 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       })
 
       if (error) {
-        alert('用户名密码错误')
+        ElMessage.error('用户名密码错误')
       } else {
+        await getUserProfile()
         const requestUrl = useRequestURL()
         const redirectUrl = requestUrl.searchParams.get("callbackUrl")
         return navigateTo(redirectUrl, { external: true })

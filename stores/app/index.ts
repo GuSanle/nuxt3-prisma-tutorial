@@ -55,11 +55,11 @@ export const useAppStore = defineStore(
       device.value = val;
     }
 
-    function changeSize(val: string) {
+    function changeSize(val: "default" | "large" | "small") {
       size.value = val;
     }
 
-    function changeLanguage(val: string) {
+    function changeLanguage(val: "zh-cn" | "en") {
       language.value = val;
     }
 

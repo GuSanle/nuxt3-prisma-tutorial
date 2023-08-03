@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
   //   : "";
 
   const userService = new UserService();
-  const { name } = await readBody(event);
+  const { username } = await readBody(event);
 
   // const userInfo = event.context.userInfo;
   // console.log("userInfo", userInfo);
@@ -19,8 +19,7 @@ export default defineEventHandler(async (event) => {
   //   return { auth: false, data: null };
   // } else {
   const data = await userService.createUser({
-    name,
-    email: "aaa@q.com",
+    username,
     password: "123456",
   });
   return data;
