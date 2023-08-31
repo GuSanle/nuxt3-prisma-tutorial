@@ -14,6 +14,5 @@ export default defineEventHandler(async (event) => {
     return data;
   };
   const result = await getKin();
-  console.log("server result: ", result);
   return result;
 });

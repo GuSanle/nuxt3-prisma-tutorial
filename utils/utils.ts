@@ -41,8 +41,6 @@ export const bcryptPassword = (password: string) => {
 
 //判断密码是否正确
 export const validatePassword = (inputPassword: string, password: string) => {
-  console.log("validatePassword");
   const data = bcrypt.compareSync(inputPassword, password);
-  console.log(data);
   return data;
 };

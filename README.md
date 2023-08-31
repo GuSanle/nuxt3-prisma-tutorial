@@ -1,3 +1,5 @@
+![license](https://img.shields.io/npm/l/nuxt3-prisma-tutorial)
+![downloads](https://img.shields.io/npm/dt/nuxt3-prisma-tutorial)
 ## nuxt 
 使用nuxt3 prisma pinia element-plus nuxt-auth mysql nuxt-security unocss来实现一个系统的模版
 
@@ -81,6 +83,9 @@ nuxt-security会导致调试等模式打不开，开发模式中nuxt.config.ts�
   服务端渲染只需要在error.vue中处理即可。但是客户端需要在plugins/vueAppErrorHandler.ts中处理。
 3 demo： 1 about/abouttwo页面。 
          2 服务端中间件session注销后报错
+
+前后台路径的坑
+前台文件路由，后台也有文件路由，会导致，客户端的pages下的路由和后台server的route下的地址如果一致，则服务端渲染时优先服务端。会返回服务端接口数据。导致和客户端渲染不一致。。
 
 
 
