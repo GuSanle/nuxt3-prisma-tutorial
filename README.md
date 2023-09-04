@@ -1,3 +1,5 @@
+![downloads](https://img.shields.io/github/downloads/GuSanle/nuxt3-prisma-tutorial/total)
+
 ## nuxt 
 使用nuxt3 prisma pinia element-plus next-auth mysql nuxt-security scss来实现一个系统的模版
 
